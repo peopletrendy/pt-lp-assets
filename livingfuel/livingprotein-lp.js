@@ -12,6 +12,8 @@ body.gradient{background-image:none!important}
 #lp-app h1,#lp-app h2,#lp-app h3,#lp-app h4{font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif!important;letter-spacing:-.02em!important}
 #lp-app .brand img{height:60px!important;width:auto!important;max-width:none!important}
 #lp-app .brand .tag{display:none!important}
+#lp-app .btn,#lp-app a.btn,#lp-app .bb-cta{color:#fff!important}
+#lp-app .btn:hover,#lp-app a.btn:hover{color:#fff!important}
 :root{--green:#148040;--green-d:#0E5539;--orange:#F47529;--orange-d:#D85A1A;--gold:#F5C842;--gold-d:#D9A625;--ink:#241a12;--ink-soft:#4a3d33;--mute:#9c8a73;--cream:#FBF6EE;--cream-2:#F5ECDD;--line:#E7DAC6;--white:#fff;--shadow:0 18px 50px -18px rgba(60,35,10,.35);--radius:18px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
