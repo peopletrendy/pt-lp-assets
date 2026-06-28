@@ -10,7 +10,9 @@ body.gradient{background-image:none!important}
 [class*="__main-padding"]{padding-top:0!important;padding-bottom:0!important}
 #lp-app{font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
 #lp-app h1,#lp-app h2,#lp-app h3,#lp-app h4{font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif!important;letter-spacing:-.02em!important}
-#lp-app .brand img{height:60px!important;width:auto!important;max-width:none!important}
+#lp-app .nav{padding:7px 0!important;min-height:0!important}
+#lp-app .brand{padding:0!important;margin:0!important;gap:0!important;min-height:0!important;height:auto!important}
+#lp-app .brand img{height:38px!important;width:auto!important;max-width:none!important;padding:0!important;margin:0!important}
 #lp-app .brand .tag{display:none!important}
 #lp-app .btn,#lp-app a.btn,#lp-app .bb-cta{color:#fff!important}
 #lp-app .btn:hover,#lp-app a.btn:hover{color:#fff!important}
