@@ -2,10 +2,16 @@
 (function(){
 var EL=document.getElementById('lp-app')||document.body;
 EL.innerHTML=`<style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
-[id*="announcement_bar"],[id*="__header"],[id*="__footer"],.shopify-section-group-header-group{display:none!important}
-#MainContent{padding:0!important;margin:0!important}
+[id*="announcement_bar"],[id*="__header"],[id*="__footer"],.shopify-section-group-header-group,sticky-header,.header-wrapper,.utility-bar{display:none!important}
+body{background:#FBF6EE!important}
+body.gradient{background-image:none!important}
+#MainContent{padding:0!important;margin:0!important;background:#FBF6EE!important}
 .main-page-section,#MainContent .page-width{max-width:none!important;width:100%!important;padding-left:0!important;padding-right:0!important;margin-left:0!important;margin-right:0!important}
 [class*="__main-padding"]{padding-top:0!important;padding-bottom:0!important}
+#lp-app{font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+#lp-app h1,#lp-app h2,#lp-app h3,#lp-app h4{font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif!important;letter-spacing:-.02em!important}
+#lp-app .brand img{height:60px!important;width:auto!important;max-width:none!important}
+#lp-app .brand .tag{display:none!important}
 :root{--green:#148040;--green-d:#0E5539;--orange:#F47529;--orange-d:#D85A1A;--gold:#F5C842;--gold-d:#D9A625;--ink:#241a12;--ink-soft:#4a3d33;--mute:#9c8a73;--cream:#FBF6EE;--cream-2:#F5ECDD;--line:#E7DAC6;--white:#fff;--shadow:0 18px 50px -18px rgba(60,35,10,.35);--radius:18px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
