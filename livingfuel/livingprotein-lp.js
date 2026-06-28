@@ -16,8 +16,7 @@ body.gradient{background-image:none!important}
 #lp-app .brand .tag{display:none!important}
 #lp-app .btn,#lp-app a.btn,#lp-app .bb-cta{color:#fff!important}
 #lp-app .btn:hover,#lp-app a.btn:hover{color:#fff!important}
-#lp-app .thumbs{display:none!important}
-#lp-app .gallery .main img{border-radius:0!important;box-shadow:none!important;background:transparent!important;filter:drop-shadow(0 26px 30px rgba(60,35,10,.22))!important}
+#lp-app .hero::before,#lp-app .hero::after{content:none!important;display:none!important;background:none!important}
 :root{--green:#148040;--green-d:#0E5539;--orange:#F47529;--orange-d:#D85A1A;--gold:#F5C842;--gold-d:#D9A625;--ink:#241a12;--ink-soft:#4a3d33;--mute:#9c8a73;--cream:#FBF6EE;--cream-2:#F5ECDD;--line:#E7DAC6;--white:#fff;--shadow:0 18px 50px -18px rgba(60,35,10,.35);--radius:18px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -186,7 +185,7 @@ footer .cp{text-align:center;margin-top:18px;color:#8a7965}
 
 <section class='hero'><div class='wrap hero-grid'>
 <div class='gallery'>
-<div class='main'><img id='heroMain' src='https://d8j0ntlcm91z4.cloudfront.net/user_2xe4bXszq79RwT7VFukaNilrFam/hf_20260628_233158_19a51599-4c6d-4ba8-b431-a7f632e229bc.png' alt='LivingProtein 25-serving can — complete plant protein'></div>
+<div class='main'><img id='heroMain' src='https://d8j0ntlcm91z4.cloudfront.net/user_2xe4bXszq79RwT7VFukaNilrFam/hf_20260626_165302_f8cd6920-615a-4a8c-be5c-90036b039f3e.png' alt='LivingProtein tub with a creamy shake, split peas and brown rice'></div>
 <div class='thumbs'>
 <div class='thumb active' data-src='https://d8j0ntlcm91z4.cloudfront.net/user_2xe4bXszq79RwT7VFukaNilrFam/hf_20260626_165302_f8cd6920-615a-4a8c-be5c-90036b039f3e.png'><img src='https://d8j0ntlcm91z4.cloudfront.net/user_2xe4bXszq79RwT7VFukaNilrFam/hf_20260626_165302_f8cd6920-615a-4a8c-be5c-90036b039f3e.png' alt=''></div>
 <div class='thumb' data-src='https://d8j0ntlcm91z4.cloudfront.net/user_2xe4bXszq79RwT7VFukaNilrFam/hf_20260626_165533_22ea1fe0-44af-42af-a30c-0b6d4c98f7f0.png'><img src='https://d8j0ntlcm91z4.cloudfront.net/user_2xe4bXszq79RwT7VFukaNilrFam/hf_20260626_165533_22ea1fe0-44af-42af-a30c-0b6d4c98f7f0.png' alt=''></div>
