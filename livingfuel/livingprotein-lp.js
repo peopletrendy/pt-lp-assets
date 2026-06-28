@@ -33,7 +33,7 @@ h1,h2,h3{line-height:1.08;letter-spacing:-.02em;font-weight:800}
 .brand img{height:40px;width:auto;display:block}
 .brand .tag{font-size:8.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft)}
 .nav .rate{font-size:12.5px;font-weight:700;color:var(--ink-soft)}
-.hero{background:radial-gradient(120% 120% at 85% 0%,#FFF3E2 0%,var(--cream) 55%);padding-bottom:40px}
+.hero{background:var(--cream);padding-bottom:40px}
 .hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:40px;align-items:start;padding-top:26px}
 .gallery .main img{width:100%;border-radius:20px;box-shadow:var(--shadow)}
 .thumbs{display:flex;gap:10px;margin-top:12px}
