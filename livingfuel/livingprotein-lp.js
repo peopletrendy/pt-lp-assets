@@ -18,6 +18,8 @@ body.gradient{background-image:none!important}
 #lp-app .btn,#lp-app a.btn,#lp-app .bb-cta{color:#fff!important}
 #lp-app .btn:hover,#lp-app a.btn:hover{color:#fff!important}
 #lp-app .hero::before,#lp-app .hero::after{content:none!important;display:none!important;background:none!important}
+@media(max-width:600px){#lp-app .nav .rate{display:none!important}}
+@media(max-width:520px){#lp-app .ctable{font-size:11px!important}#lp-app .ctable th,#lp-app .ctable td{padding:8px 4px!important}#lp-app .ctable thead th.us{font-size:11px!important}#lp-app .ctable thead th{line-height:1.12}}
 :root{--green:#148040;--green-d:#0E5539;--orange:#F47529;--orange-d:#D85A1A;--gold:#F5C842;--gold-d:#D9A625;--ink:#241a12;--ink-soft:#4a3d33;--mute:#9c8a73;--cream:#FBF6EE;--cream-2:#F5ECDD;--line:#E7DAC6;--white:#fff;--shadow:0 18px 50px -18px rgba(60,35,10,.35);--radius:18px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
