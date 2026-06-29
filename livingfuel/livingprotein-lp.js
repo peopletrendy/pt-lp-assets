@@ -8,6 +8,7 @@ body.gradient{background-image:none!important}
 #MainContent{padding:0!important;margin:0!important;background:#FBF6EE!important}
 .main-page-section,#MainContent .page-width{max-width:none!important;width:100%!important;padding-left:0!important;padding-right:0!important;margin-left:0!important;margin-right:0!important}
 [class*="__main-padding"]{padding-top:0!important;padding-bottom:0!important}
+#MainContent .rte,#MainContent .scroll-trigger,#MainContent [class*="animate--"]{transform:none!important;will-change:auto!important;opacity:1!important}
 #lp-app{font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
 #lp-app h1,#lp-app h2,#lp-app h3,#lp-app h4{font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif!important;letter-spacing:-.02em!important}
 #lp-app .nav{padding:7px 0!important;min-height:0!important}
@@ -304,7 +305,6 @@ function add(){var p=PLANS[current];var items=[{id:p.id,quantity:1}];if(p.sp){it
 document.addEventListener('click',function(e){var opt=e.target.closest('.bb-opt');if(opt){setPlan(opt);return;}var cta=e.target.closest('.bb-cta');if(cta){e.preventDefault();add();return;}var th=e.target.closest('.thumb');if(th){var src=th.getAttribute('data-src');if(src){document.getElementById('heroMain').src=src;var ts=document.querySelectorAll('.thumb');for(var k=0;k<ts.length;k++){ts[k].classList.remove('active');}th.classList.add('active');}return;}});
 var def=document.querySelector('.bb-opt.active');if(def){setPlan(def);}
 
-// ===== LP lead-capture popup: exit-intent (desktop) + scroll-up/delay (mobile), once per session =====
 (function(){
 var modal=document.getElementById('lpModal'); if(!modal) return;
 var shown=false;
@@ -332,7 +332,6 @@ f.addEventListener('submit',function(e){
   document.getElementById('lpmReveal').style.display='block';
 });
 })();
-// ===== Suppress the generic site-wide Klaviyo popup on this dedicated LP =====
 (function(){
 function kill(){ var els=document.querySelectorAll('[class*="kl-private-reset"]'); for(var i=0;i<els.length;i++){ var n=els[i]; while(n&&n.parentElement&&n.parentElement!==document.body){n=n.parentElement;} if(n&&n.parentElement===document.body){ n.style.display='none'; } } }
 kill();
