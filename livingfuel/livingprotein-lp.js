@@ -180,7 +180,26 @@ footer .cp{text-align:center;margin-top:18px;color:#8a7965}
 .sticky .pr{font-size:13px;color:var(--ink-soft);font-weight:700}
 .sticky .btn{padding:14px 22px;font-size:15px}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:22px}.hero h1{font-size:34px}.sec{padding:46px 0}.sec h2{font-size:27px}.twocol,.pillgrid,.b3,.rev3,.amino-grid,.nogrid,.founder-grid,.revsum{grid-template-columns:1fr}.revsum .agg{border-right:none;border-bottom:1px solid var(--line);padding:0 0 18px}.vs{display:none}.pillgrid{grid-template-columns:1fr 1fr}.g-grid{grid-template-columns:1fr;text-align:center;justify-items:center}.final h2{font-size:28px}.sticky{display:flex}body{padding-bottom:74px}.statband .s+.s{border-left:none}.ctable{font-size:13px}.ctable th,.ctable td{padding:11px 8px}}
-@media(max-width:520px){.pillgrid,.nogrid{grid-template-columns:1fr}.hero h1{font-size:30px}}</style><div class='announce'>FREE SHIPPING ON SUBSCRIPTIONS &nbsp;&middot;&nbsp; <b>30-DAY</b> MONEY-BACK GUARANTEE &nbsp;&middot;&nbsp; FREE SHAKER + 2 GUIDES &nbsp;&middot;&nbsp; <b>500,000+</b> CANS SOLD</div>
+@media(max-width:520px){.pillgrid,.nogrid{grid-template-columns:1fr}.hero h1{font-size:30px}}
+#lp-app .lpm-overlay{position:fixed;inset:0;z-index:2147483600;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(36,26,18,.74);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+#lp-app .lpm-overlay.open{display:flex}
+#lp-app .lpm-card{position:relative;width:100%;max-width:458px;background:linear-gradient(180deg,#fff,var(--cream));border-radius:22px;box-shadow:0 30px 90px -20px rgba(0,0,0,.55);padding:40px 34px 30px;text-align:center;animation:lpmIn .35s ease}
+@keyframes lpmIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+#lp-app .lpm-x{position:absolute;top:11px;right:15px;background:none;border:none;font-size:30px;line-height:1;color:var(--mute);cursor:pointer;padding:4px}
+#lp-app .lpm-logo{height:32px!important;width:auto!important;margin:0 auto 16px!important;display:block}
+#lp-app .lpm-eyebrow{font-weight:800;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--orange-d)}
+#lp-app .lpm-h{font-size:31px;font-weight:900;margin:9px 0 11px;line-height:1.04}
+#lp-app .lpm-h span{color:var(--orange-d)}
+#lp-app .lpm-sub{font-size:15px;color:var(--ink-soft);margin-bottom:20px;line-height:1.5}
+#lp-app .lpm-formrow{display:flex;flex-direction:column;gap:10px}
+#lp-app .lpm-input{width:100%;padding:15px 16px;border:2px solid var(--line);border-radius:12px;font-size:16px;font-family:inherit;text-align:center;color:var(--ink)}
+#lp-app .lpm-input:focus{outline:none;border-color:var(--orange)}
+#lp-app .lpm-btn{width:100%;font-size:17px}
+#lp-app .lpm-fine{font-size:11px;color:var(--mute);margin-top:13px;line-height:1.55}
+#lp-app .lpm-burst{font-size:42px;margin-bottom:4px}
+#lp-app .lpm-code{font-weight:900;font-size:23px;letter-spacing:.07em;color:var(--green);background:#eaf5ee;border:2px dashed var(--green);border-radius:12px;padding:15px;margin-bottom:16px}
+@media(max-width:520px){#lp-app .lpm-card{padding:34px 22px 26px}#lp-app .lpm-h{font-size:26px}}
+</style><div class='announce'>FREE SHIPPING ON SUBSCRIPTIONS &nbsp;&middot;&nbsp; <b>30-DAY</b> MONEY-BACK GUARANTEE &nbsp;&middot;&nbsp; FREE SHAKER + 2 GUIDES &nbsp;&middot;&nbsp; <b>500,000+</b> CANS SOLD</div>
 <div class='wrap'><div class='nav'><div class='brand'><img src='https://cdn.shopify.com/s/files/1/0705/3541/3938/files/LivingFuel-Logo-Lockup.png?v=1782527503' alt='LivingFuel - Scientifically Perfected Nutrition' style='height:46px;width:auto;display:block'></div><div class='rate'>&#9733;&#9733;&#9733;&#9733;&#9733; #1-Ranked Plant Protein</div></div></div>
 
 <section class='hero'><div class='wrap hero-grid'>
@@ -249,7 +268,33 @@ footer .cp{text-align:center;margin-top:18px;color:#8a7965}
 
 <footer><div class='wrap'><div class='disc'><b>Statements about products and health conditions have not been evaluated by the U.S. Food and Drug Administration and are not intended to diagnose, treat, cure, or prevent any disease.</b> Individual results may vary. Consult your healthcare professional before starting any new supplement program. If you are pregnant, nursing, taking medication, or have a medical condition, consult your healthcare professional before using this product.</div><div class='fl'><a href='#'>Shop</a><a href='#'>Our Science</a><a href='#'>Subscriptions</a><a href='#'>Contact</a><a href='#'>Shipping &amp; Returns</a><a href='#'>Privacy</a></div><div class='cp'>&copy; LivingFuel &mdash; The Leader in Superfood Nutrition &middot; Scientifically Perfected Nutrition</div></div></footer>
 
-<div class='sticky'><div><div class='nm'>LivingProtein</div><div class='pr' id='stickyPr'><b>$59.99</b> &middot; Subscribe &amp; Save</div></div><a href='#offer' class='btn'>Choose Plan &rarr;</a></div>`;
+<div class='sticky'><div><div class='nm'>LivingProtein</div><div class='pr' id='stickyPr'><b>$59.99</b> &middot; Subscribe &amp; Save</div></div><a href='#offer' class='btn'>Choose Plan &rarr;</a></div>
+<div id="lpModal" class="lpm-overlay" aria-hidden="true">
+<div class="lpm-card" role="dialog" aria-modal="true" aria-label="Mystery offer">
+<button class="lpm-x" id="lpmClose" aria-label="Close">&times;</button>
+<div id="lpmForm">
+<img class="lpm-logo" src="https://cdn.shopify.com/s/files/1/0705/3541/3938/files/LivingFuel-Logo-Lockup.png?v=1782527503" alt="LivingFuel">
+<div class="lpm-eyebrow">Before you go &mdash; one thing</div>
+<h2 class="lpm-h">Unlock a <span>mystery discount</span></h2>
+<p class="lpm-sub">Drop your email and we&rsquo;ll reveal a one-time offer on your first LivingProtein&reg; order &mdash; plus a few gut-health tips worth keeping.</p>
+<form class="lpm-formrow" id="lpmFormEl">
+<input type="email" id="lpmEmail" class="lpm-input" placeholder="Your email address" required autocomplete="email">
+<button type="submit" class="btn lpm-btn">Reveal My Offer &rarr;</button>
+</form>
+<div class="lpm-fine">No spam &mdash; unsubscribe anytime. By entering your email you agree to receive marketing emails from LivingFuel.</div>
+</div>
+<div id="lpmReveal" style="display:none">
+<div class="lpm-burst">&#127881;</div>
+<div class="lpm-eyebrow">Your mystery offer is</div>
+<h2 class="lpm-h"><span>10% OFF</span> your first order</h2>
+<p class="lpm-sub">Use this code at checkout &mdash; we&rsquo;ve emailed it to you too:</p>
+<div class="lpm-code">LFLP-MYSTERY10</div>
+<a class="btn lpm-btn" id="lpmApply" href="/discount/LFLP-MYSTERY10?redirect=%2Fpages%2Flivingprotein-lp">Apply &amp; Shop &rarr;</a>
+<div class="lpm-fine">10% off your first order &middot; one use per customer.</div>
+</div>
+</div>
+</div>
+`;
 var PLANS={sub:{id:45399702208690,sp:2442231986,price:'$59.99',label:'Subscribe & Save'},bundle:{id:46990698315954,price:'$179.97',label:'Bundle & Save'},once:{id:45399702208690,price:'$69.99',label:'One-Time'}};
 var SHAKER=47564921503922;
 var GIFT='/discount/LFLP-FREESHAKER?redirect='+encodeURIComponent('/discount/LFLP-FREESHIP?redirect=/checkout');
@@ -258,4 +303,41 @@ function setPlan(el){var box=el.closest('.buybox');var opts=box.querySelectorAll
 function add(){var p=PLANS[current];var items=[{id:p.id,quantity:1}];if(p.sp){items[0].selling_plan=p.sp;}if(current==='sub'){items.push({id:SHAKER,quantity:1});}fetch('/cart/add.js',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({items:items})}).then(function(r){return r.json();}).then(function(){window.location.href=(current==='sub')?GIFT:'/checkout';}).catch(function(){window.location.href='/cart';});}
 document.addEventListener('click',function(e){var opt=e.target.closest('.bb-opt');if(opt){setPlan(opt);return;}var cta=e.target.closest('.bb-cta');if(cta){e.preventDefault();add();return;}var th=e.target.closest('.thumb');if(th){var src=th.getAttribute('data-src');if(src){document.getElementById('heroMain').src=src;var ts=document.querySelectorAll('.thumb');for(var k=0;k<ts.length;k++){ts[k].classList.remove('active');}th.classList.add('active');}return;}});
 var def=document.querySelector('.bb-opt.active');if(def){setPlan(def);}
+
+// ===== LP lead-capture popup: exit-intent (desktop) + scroll-up/delay (mobile), once per session =====
+(function(){
+var modal=document.getElementById('lpModal'); if(!modal) return;
+var shown=false;
+function openM(){ if(shown||sessionStorage.getItem('lpmSeen')) return; shown=true; try{sessionStorage.setItem('lpmSeen','1');}catch(e){} modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); }
+function closeM(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }
+document.getElementById('lpmClose').addEventListener('click',closeM);
+modal.addEventListener('click',function(e){ if(e.target===modal) closeM(); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeM(); });
+var mobile=window.matchMedia('(max-width:900px)').matches;
+if(mobile){
+  var lastY=window.scrollY||0, maxY=0;
+  window.addEventListener('scroll',function(){ var y=window.scrollY||0; if(y>maxY)maxY=y; if(maxY>600 && y<lastY-45) openM(); lastY=y; },{passive:true});
+  setTimeout(function(){ if(maxY>300) openM(); },25000);
+} else {
+  document.addEventListener('mouseout',function(e){ if(!e.relatedTarget && e.clientY<=0) openM(); });
+  setTimeout(openM,45000);
+}
+var f=document.getElementById('lpmFormEl');
+f.addEventListener('submit',function(e){
+  e.preventDefault();
+  var email=(document.getElementById('lpmEmail').value||'').trim();
+  if(!email||email.indexOf('@')<1) return;
+  try{ window._learnq=window._learnq||[]; window._learnq.push(['identify',{'$email':email,'$source':'LivingProtein LP popup'}]); window._learnq.push(['track','LP Mystery Offer Unlocked',{email:email,code:'LFLP-MYSTERY10',offer:'10% off first order'}]); }catch(err){}
+  document.getElementById('lpmForm').style.display='none';
+  document.getElementById('lpmReveal').style.display='block';
+});
+})();
+// ===== Suppress the generic site-wide Klaviyo popup on this dedicated LP =====
+(function(){
+function kill(){ var els=document.querySelectorAll('[class*="kl-private-reset"]'); for(var i=0;i<els.length;i++){ var n=els[i]; while(n&&n.parentElement&&n.parentElement!==document.body){n=n.parentElement;} if(n&&n.parentElement===document.body){ n.style.display='none'; } } }
+kill();
+try{ new MutationObserver(kill).observe(document.body,{childList:true,subtree:true}); }catch(e){}
+setInterval(kill,1500);
+})();
+
 })();
