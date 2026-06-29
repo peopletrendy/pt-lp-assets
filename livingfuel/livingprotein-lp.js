@@ -184,22 +184,25 @@ footer .cp{text-align:center;margin-top:18px;color:#8a7965}
 @media(max-width:520px){.pillgrid,.nogrid{grid-template-columns:1fr}.hero h1{font-size:30px}}
 #lpModal{position:fixed;inset:0;z-index:2147483600;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(36,26,18,.74);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
 #lpModal.open{display:flex}
-#lpModal .lpm-card{position:relative;width:100%;max-width:458px;background:linear-gradient(180deg,#fff,#FBF6EE);border-radius:22px;box-shadow:0 30px 90px -20px rgba(0,0,0,.55);padding:40px 34px 30px;text-align:center;animation:lpmIn .35s ease;color:#241a12}
+#lpModal .lpm-card{position:relative;width:100%;max-width:460px;background:linear-gradient(180deg,#fff,#FBF6EE);border-radius:22px;box-shadow:0 30px 90px -20px rgba(0,0,0,.55);padding:38px 32px 26px;text-align:center;animation:lpmIn .35s ease;color:#241a12}
 @keyframes lpmIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
-#lpModal .lpm-x{position:absolute;top:11px;right:15px;background:none;border:none;font-size:30px;line-height:1;color:#9c8a73;cursor:pointer;padding:4px}
-#lpModal .lpm-logo{height:32px;width:auto;margin:0 auto 16px;display:block}
+#lpModal .lpm-x{position:absolute;top:10px;right:14px;background:none;border:none;font-size:26px;line-height:1;color:#c9bba6;cursor:pointer;padding:4px}
+#lpModal .lpm-logo{height:30px;width:auto;margin:0 auto 14px;display:block}
 #lpModal .lpm-eyebrow{font-weight:800;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#D85A1A}
-#lpModal .lpm-h{font-size:31px;font-weight:900;margin:9px 0 11px;line-height:1.04;letter-spacing:-.02em}
+#lpModal .lpm-h{font-size:30px;font-weight:900;margin:6px 0 14px;line-height:1.05}
 #lpModal .lpm-h span{color:#D85A1A}
-#lpModal .lpm-sub{font-size:15px;color:#4a3d33;margin-bottom:20px;line-height:1.5}
+#lpModal .lpm-sub{font-size:15px;color:#4a3d33;margin-bottom:16px;line-height:1.45}
+#lpModal .lpm-opt{display:block;width:100%;background:#fff;border:2px solid #E7DAC6;border-radius:12px;padding:15px;margin-bottom:10px;font-size:16px;font-weight:800;color:#241a12;cursor:pointer;font-family:inherit;transition:border-color .15s,background .15s}
+#lpModal .lpm-opt:hover{border-color:#F47529;background:#FFF6EE}
 #lpModal .lpm-formrow{display:flex;flex-direction:column;gap:10px}
 #lpModal .lpm-input{width:100%;padding:15px 16px;border:2px solid #E7DAC6;border-radius:12px;font-size:16px;font-family:inherit;text-align:center;color:#241a12}
 #lpModal .lpm-input:focus{outline:none;border-color:#F47529}
 #lpModal .lpm-btn{width:100%;font-size:17px;color:#fff!important}
-#lpModal .lpm-fine{font-size:11px;color:#9c8a73;margin-top:13px;line-height:1.55}
+#lpModal .lpm-fine{font-size:11px;color:#9c8a73;margin-top:12px;line-height:1.5}
+#lpModal .lpm-nothanks{display:inline-block;margin-top:12px;background:none;border:none;color:#9c8a73;font-size:13px;font-weight:600;text-decoration:underline;cursor:pointer;font-family:inherit}
 #lpModal .lpm-burst{font-size:42px;margin-bottom:4px}
 #lpModal .lpm-code{font-weight:900;font-size:23px;letter-spacing:.07em;color:#148040;background:#eaf5ee;border:2px dashed #148040;border-radius:12px;padding:15px;margin-bottom:16px}
-@media(max-width:520px){#lpModal .lpm-card{padding:34px 22px 26px}#lpModal .lpm-h{font-size:26px}}
+@media(max-width:520px){#lpModal .lpm-card{padding:32px 22px 24px}#lpModal .lpm-h{font-size:26px}}
 </style><div class='announce'>FREE SHIPPING ON SUBSCRIPTIONS &nbsp;&middot;&nbsp; <b>30-DAY</b> MONEY-BACK GUARANTEE &nbsp;&middot;&nbsp; FREE SHAKER + 2 GUIDES &nbsp;&middot;&nbsp; <b>500,000+</b> CANS SOLD</div>
 <div class='wrap'><div class='nav'><div class='brand'><img src='https://cdn.shopify.com/s/files/1/0705/3541/3938/files/LivingFuel-Logo-Lockup.png?v=1782527503' alt='LivingFuel - Scientifically Perfected Nutrition' style='height:46px;width:auto;display:block'></div><div class='rate'>&#9733;&#9733;&#9733;&#9733;&#9733; #1-Ranked Plant Protein</div></div></div>
 
@@ -273,22 +276,33 @@ footer .cp{text-align:center;margin-top:18px;color:#8a7965}
 <div id="lpModal" aria-hidden="true">
 <div class="lpm-card" role="dialog" aria-modal="true" aria-label="Mystery offer">
 <button class="lpm-x" id="lpmClose" aria-label="Close">&times;</button>
-<div id="lpmForm">
+<div id="lpmQuiz">
 <img class="lpm-logo" src="https://cdn.shopify.com/s/files/1/0705/3541/3938/files/LivingFuel-Logo-Lockup.png?v=1782527503" alt="LivingFuel">
-<div class="lpm-eyebrow">Before you go &mdash; one thing</div>
-<h2 class="lpm-h">Unlock a <span>mystery discount</span></h2>
-<p class="lpm-sub">Drop your email and we&rsquo;ll reveal a one-time offer on your first LivingProtein&reg; order &mdash; plus a few gut-health tips worth keeping.</p>
+<div class="lpm-eyebrow">You&rsquo;ve got a</div>
+<h2 class="lpm-h"><span>mystery discount</span> &#127881;</h2>
+<p class="lpm-sub">To unlock it &mdash; what&rsquo;s your #1 goal?</p>
+<button class="lpm-opt" data-goal="Complete daily nutrition">Complete daily nutrition</button>
+<button class="lpm-opt" data-goal="Energy &amp; vitality">Energy &amp; vitality</button>
+<button class="lpm-opt" data-goal="Performance &amp; recovery">Performance &amp; recovery</button>
+<button class="lpm-nothanks lpm-decline" type="button">No thanks, I&rsquo;ll pay full price</button>
+</div>
+<div id="lpmForm" style="display:none">
+<img class="lpm-logo" src="https://cdn.shopify.com/s/files/1/0705/3541/3938/files/LivingFuel-Logo-Lockup.png?v=1782527503" alt="LivingFuel">
+<div class="lpm-eyebrow">One step away</div>
+<h2 class="lpm-h">Reveal your <span>mystery discount</span></h2>
+<p class="lpm-sub">Enter your email and we&rsquo;ll unlock your offer.</p>
 <form class="lpm-formrow" id="lpmFormEl">
 <input type="email" id="lpmEmail" class="lpm-input" placeholder="Your email address" required autocomplete="email">
 <button type="submit" class="btn lpm-btn">Reveal My Offer &rarr;</button>
 </form>
 <div class="lpm-fine">No spam &mdash; unsubscribe anytime. By entering your email you agree to receive marketing emails from LivingFuel.</div>
+<button class="lpm-nothanks lpm-decline" type="button">No thanks, I&rsquo;ll pay full price</button>
 </div>
 <div id="lpmReveal" style="display:none">
 <div class="lpm-burst">&#127881;</div>
 <div class="lpm-eyebrow">Your mystery offer is</div>
 <h2 class="lpm-h"><span>10% OFF</span> your first order</h2>
-<p class="lpm-sub">Use this code at checkout &mdash; we&rsquo;ve emailed it to you too:</p>
+<p class="lpm-sub">We just emailed your code &mdash; or use it right now:</p>
 <div class="lpm-code">LFLP-MYSTERY10</div>
 <a class="btn lpm-btn" id="lpmApply" href="/discount/LFLP-MYSTERY10?redirect=%2Fpages%2Flivingprotein-lp">Apply &amp; Shop &rarr;</a>
 <div class="lpm-fine">10% off your first order &middot; one use per customer.</div>
@@ -308,30 +322,25 @@ var def=document.querySelector('.bb-opt.active');if(def){setPlan(def);}
 (function(){
 var modal=document.getElementById('lpModal'); if(!modal) return;
 if(modal.parentElement!==document.body){ document.body.appendChild(modal); }
-var shown=false;
+var GOAL='', shown=false;
 function openM(){ if(shown||sessionStorage.getItem('lpmSeen')) return; shown=true; try{sessionStorage.setItem('lpmSeen','1');}catch(e){} modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); }
 function closeM(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }
+function show(id){ ['lpmQuiz','lpmForm','lpmReveal'].forEach(function(s){var el=document.getElementById(s); if(el) el.style.display=(s===id?'block':'none');}); }
 document.getElementById('lpmClose').addEventListener('click',closeM);
 modal.addEventListener('click',function(e){ if(e.target===modal) closeM(); });
 document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeM(); });
-var mobile=window.matchMedia('(max-width:900px)').matches;
-if(mobile){
-  var lastY=window.scrollY||0, maxY=0;
-  window.addEventListener('scroll',function(){ var y=window.scrollY||0; if(y>maxY)maxY=y; if(maxY>600 && y<lastY-45) openM(); lastY=y; },{passive:true});
-  setTimeout(function(){ if(maxY>300) openM(); },25000);
-} else {
-  document.addEventListener('mouseout',function(e){ if(!e.relatedTarget && e.clientY<=0) openM(); });
-  setTimeout(openM,45000);
-}
-var f=document.getElementById('lpmFormEl');
-f.addEventListener('submit',function(e){
+var dec=modal.querySelectorAll('.lpm-decline'); for(var i=0;i<dec.length;i++){ dec[i].addEventListener('click',closeM); }
+var opts=modal.querySelectorAll('.lpm-opt'); for(var j=0;j<opts.length;j++){ opts[j].addEventListener('click',function(){ GOAL=(this.textContent||'').trim(); show('lpmForm'); var inp=document.getElementById('lpmEmail'); if(inp){ setTimeout(function(){try{inp.focus();}catch(e){}},60); } }); }
+document.getElementById('lpmFormEl').addEventListener('submit',function(e){
   e.preventDefault();
   var email=(document.getElementById('lpmEmail').value||'').trim();
   if(!email||email.indexOf('@')<1) return;
-  try{ window._learnq=window._learnq||[]; window._learnq.push(['identify',{'$email':email,'$source':'LivingProtein LP popup'}]); window._learnq.push(['track','LP Mystery Offer Unlocked',{email:email,code:'LFLP-MYSTERY10',offer:'10% off first order'}]); }catch(err){}
-  document.getElementById('lpmForm').style.display='none';
-  document.getElementById('lpmReveal').style.display='block';
+  try{ window._learnq=window._learnq||[]; var p={'$email':email,'$source':'LivingProtein LP popup'}; if(GOAL){ p['LP Goal']=GOAL; } window._learnq.push(['identify',p]); window._learnq.push(['track','LP Mystery Offer Unlocked',{email:email,code:'LFLP-MYSTERY10',offer:'10% off first order',goal:GOAL}]); }catch(err){}
+  show('lpmReveal');
 });
+// Trigger per Wellcopy: 6s time delay (both); desktop also gets exit-intent. Once per session.
+setTimeout(openM,6000);
+if(!window.matchMedia('(max-width:900px)').matches){ document.addEventListener('mouseout',function(e){ if(!e.relatedTarget && e.clientY<=0) openM(); }); }
 })();
 (function(){
 function kill(){ var els=document.querySelectorAll('[class*="kl-private-reset"]'); for(var i=0;i<els.length;i++){ var n=els[i]; while(n&&n.parentElement&&n.parentElement!==document.body){n=n.parentElement;} if(n&&n.parentElement===document.body){ n.style.display='none'; } } }
