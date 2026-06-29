@@ -184,25 +184,27 @@ footer .cp{text-align:center;margin-top:18px;color:#8a7965}
 @media(max-width:520px){.pillgrid,.nogrid{grid-template-columns:1fr}.hero h1{font-size:30px}}
 #lpModal{position:fixed;inset:0;z-index:2147483600;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(36,26,18,.74);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
 #lpModal.open{display:flex}
-#lpModal .lpm-card{position:relative;width:100%;max-width:460px;background:linear-gradient(180deg,#fff,#FBF6EE);border-radius:22px;box-shadow:0 30px 90px -20px rgba(0,0,0,.55);padding:38px 32px 26px;text-align:center;animation:lpmIn .35s ease;color:#241a12}
+#lpModal .lpm-card{position:relative;width:100%;max-width:460px;max-height:92vh;overflow-y:auto;background:linear-gradient(180deg,#fff,#FBF6EE);border-radius:22px;box-shadow:0 30px 90px -20px rgba(0,0,0,.55);padding:36px 32px 24px;text-align:center;animation:lpmIn .35s ease;color:#241a12}
 @keyframes lpmIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
-#lpModal .lpm-x{position:absolute;top:10px;right:14px;background:none;border:none;font-size:26px;line-height:1;color:#c9bba6;cursor:pointer;padding:4px}
-#lpModal .lpm-logo{height:30px;width:auto;margin:0 auto 14px;display:block}
+#lpModal .lpm-x{position:absolute;top:10px;right:14px;background:none;border:none;font-size:26px;line-height:1;color:#c9bba6;cursor:pointer;padding:4px;z-index:2}
+#lpModal .lpm-logo{height:28px;width:auto;margin:0 auto 12px;display:block}
+#lpModal .lpm-prog{font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:#c9bba6;margin-bottom:10px}
 #lpModal .lpm-eyebrow{font-weight:800;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#D85A1A}
-#lpModal .lpm-h{font-size:30px;font-weight:900;margin:6px 0 14px;line-height:1.05}
+#lpModal .lpm-h{font-size:27px;font-weight:900;margin:6px 0 12px;line-height:1.08}
 #lpModal .lpm-h span{color:#D85A1A}
 #lpModal .lpm-sub{font-size:15px;color:#4a3d33;margin-bottom:16px;line-height:1.45}
-#lpModal .lpm-opt{display:block;width:100%;background:#fff;border:2px solid #E7DAC6;border-radius:12px;padding:15px;margin-bottom:10px;font-size:16px;font-weight:800;color:#241a12;cursor:pointer;font-family:inherit;transition:border-color .15s,background .15s}
+#lpModal .lpm-opt{display:block;width:100%;background:#fff;border:2px solid #E7DAC6;border-radius:12px;padding:14px;margin-bottom:9px;font-size:15.5px;font-weight:800;color:#241a12;cursor:pointer;font-family:inherit;transition:border-color .15s,background .15s}
 #lpModal .lpm-opt:hover{border-color:#F47529;background:#FFF6EE}
 #lpModal .lpm-formrow{display:flex;flex-direction:column;gap:10px}
 #lpModal .lpm-input{width:100%;padding:15px 16px;border:2px solid #E7DAC6;border-radius:12px;font-size:16px;font-family:inherit;text-align:center;color:#241a12}
 #lpModal .lpm-input:focus{outline:none;border-color:#F47529}
 #lpModal .lpm-btn{width:100%;font-size:17px;color:#fff!important}
-#lpModal .lpm-fine{font-size:11px;color:#9c8a73;margin-top:12px;line-height:1.5}
+#lpModal .lpm-fine{font-size:10.5px;color:#9c8a73;margin-top:11px;line-height:1.5}
 #lpModal .lpm-nothanks{display:inline-block;margin-top:12px;background:none;border:none;color:#9c8a73;font-size:13px;font-weight:600;text-decoration:underline;cursor:pointer;font-family:inherit}
-#lpModal .lpm-burst{font-size:42px;margin-bottom:4px}
-#lpModal .lpm-code{font-weight:900;font-size:23px;letter-spacing:.07em;color:#148040;background:#eaf5ee;border:2px dashed #148040;border-radius:12px;padding:15px;margin-bottom:16px}
-@media(max-width:520px){#lpModal .lpm-card{padding:32px 22px 24px}#lpModal .lpm-h{font-size:26px}}
+#lpModal .lpm-burst{font-size:40px;margin-bottom:2px}
+#lpModal .lpm-match{font-size:34px;margin-bottom:2px}
+#lpModal .lpm-code{font-weight:900;font-size:23px;letter-spacing:.07em;color:#148040;background:#eaf5ee;border:2px dashed #148040;border-radius:12px;padding:15px;margin-bottom:14px}
+@media(max-width:520px){#lpModal .lpm-card{padding:30px 20px 22px}#lpModal .lpm-h{font-size:24px}}
 </style><div class='announce'>FREE SHIPPING ON SUBSCRIPTIONS &nbsp;&middot;&nbsp; <b>30-DAY</b> MONEY-BACK GUARANTEE &nbsp;&middot;&nbsp; FREE SHAKER + 2 GUIDES &nbsp;&middot;&nbsp; <b>500,000+</b> CANS SOLD</div>
 <div class='wrap'><div class='nav'><div class='brand'><img src='https://cdn.shopify.com/s/files/1/0705/3541/3938/files/LivingFuel-Logo-Lockup.png?v=1782527503' alt='LivingFuel - Scientifically Perfected Nutrition' style='height:46px;width:auto;display:block'></div><div class='rate'>&#9733;&#9733;&#9733;&#9733;&#9733; #1-Ranked Plant Protein</div></div></div>
 
@@ -274,39 +276,77 @@ footer .cp{text-align:center;margin-top:18px;color:#8a7965}
 
 <div class='sticky'><div><div class='nm'>LivingProtein</div><div class='pr' id='stickyPr'><b>$59.99</b> &middot; Subscribe &amp; Save</div></div><a href='#offer' class='btn'>Choose Plan &rarr;</a></div>
 <div id="lpModal" aria-hidden="true">
-<div class="lpm-card" role="dialog" aria-modal="true" aria-label="Mystery offer">
+<div class="lpm-card" role="dialog" aria-modal="true" aria-label="LivingProtein quiz">
 <button class="lpm-x" id="lpmClose" aria-label="Close">&times;</button>
-<div id="lpmQuiz">
-<img class="lpm-logo" src="https://cdn.shopify.com/s/files/1/0705/3541/3938/files/LivingFuel-Logo-Lockup.png?v=1782527503" alt="LivingFuel">
-<div class="lpm-eyebrow">You&rsquo;ve got a</div>
-<h2 class="lpm-h"><span>mystery discount</span> &#127881;</h2>
-<p class="lpm-sub">To unlock it &mdash; what&rsquo;s your #1 goal?</p>
-<button class="lpm-opt" data-goal="Complete daily nutrition">Complete daily nutrition</button>
-<button class="lpm-opt" data-goal="Energy &amp; vitality">Energy &amp; vitality</button>
-<button class="lpm-opt" data-goal="Performance &amp; recovery">Performance &amp; recovery</button>
-<button class="lpm-nothanks lpm-decline" type="button">No thanks, I&rsquo;ll pay full price</button>
-</div>
-<div id="lpmForm" style="display:none">
-<img class="lpm-logo" src="https://cdn.shopify.com/s/files/1/0705/3541/3938/files/LivingFuel-Logo-Lockup.png?v=1782527503" alt="LivingFuel">
-<div class="lpm-eyebrow">One step away</div>
-<h2 class="lpm-h">Reveal your <span>mystery discount</span></h2>
-<p class="lpm-sub">Enter your email and we&rsquo;ll unlock your offer.</p>
+
+<div id="lpmIntro"><img class="lpm-logo" src="https://cdn.shopify.com/s/files/1/0705/3541/3938/files/LivingFuel-Logo-Lockup.png?v=1782527503" alt="LivingFuel">
+<div class="lpm-eyebrow">30-second quiz</div>
+<h2 class="lpm-h">Is LivingProtein <span>right for you?</span></h2>
+<p class="lpm-sub">Answer 3 quick questions and unlock <b>10% off</b> to try it for yourself.</p>
+<button class="btn lpm-btn" id="lpmStart" type="button">Start the Quiz &rarr;</button>
+<button class="lpm-nothanks lpm-decline" type="button">No thanks, I&rsquo;ll pay full price</button></div>
+
+<div id="lpmQ1" style="display:none">
+<div class="lpm-prog">Question 1 of 3</div>
+<h2 class="lpm-h">How much protein do you get most days?</h2>
+<button class="lpm-opt" data-val="Not enough">Honestly, not enough</button>
+<button class="lpm-opt" data-val="Could be better">Some &mdash; could be better</button>
+<button class="lpm-opt" data-val="Hits goal">I hit my protein goal</button>
+<button class="lpm-nothanks lpm-decline" type="button">No thanks, I&rsquo;ll pay full price</button></div>
+
+<div id="lpmQ2" style="display:none">
+<div class="lpm-prog">Question 2 of 3</div>
+<h2 class="lpm-h">What protein have you used before?</h2>
+<button class="lpm-opt" data-val="Whey/dairy">Whey / dairy-based</button>
+<button class="lpm-opt" data-val="Plant-based">Plant-based</button>
+<button class="lpm-opt" data-val="Both">Both</button>
+<button class="lpm-opt" data-val="None yet">None yet</button>
+<button class="lpm-nothanks lpm-decline" type="button">No thanks, I&rsquo;ll pay full price</button></div>
+
+<div id="lpmQ3" style="display:none">
+<div class="lpm-prog">Question 3 of 3</div>
+<h2 class="lpm-h">Do any of these sound familiar?</h2>
+<button class="lpm-opt" data-val="Bloating/gas" data-result="gut">Bloating or gas</button>
+<button class="lpm-opt" data-val="Cramping" data-result="gut">Cramping or stomach discomfort</button>
+<button class="lpm-opt" data-val="Chalky taste" data-result="smooth">Chalky &amp; hard to drink</button>
+<button class="lpm-opt" data-val="None" data-result="generic">None of these</button>
+<button class="lpm-nothanks lpm-decline" type="button">No thanks, I&rsquo;ll pay full price</button></div>
+
+<div id="lpmResult" style="display:none">
+<div class="lpm-match">&#9989;</div>
+<div class="lpm-eyebrow">Your result</div>
+<h2 class="lpm-h">You&rsquo;re a <span>match</span>.</h2>
+<p class="lpm-sub" id="lpmResultLine">You&rsquo;re a strong match for LivingProtein.</p>
+<p class="lpm-sub">Enter your email and we&rsquo;ll send your <b>10% off code</b> &mdash; try it and feel the difference for yourself.</p>
 <form class="lpm-formrow" id="lpmFormEl">
 <input type="email" id="lpmEmail" class="lpm-input" placeholder="Your email address" required autocomplete="email">
-<button type="submit" class="btn lpm-btn">Reveal My Offer &rarr;</button>
+<button type="submit" class="btn lpm-btn">Get My 10% Off &rarr;</button>
 </form>
 <div class="lpm-fine">No spam &mdash; unsubscribe anytime. By entering your email you agree to receive marketing emails from LivingFuel.</div>
-<button class="lpm-nothanks lpm-decline" type="button">No thanks, I&rsquo;ll pay full price</button>
+<button class="lpm-nothanks lpm-decline" type="button">No thanks, I&rsquo;ll pay full price</button></div>
+
+<div id="lpmPhone" style="display:none">
+<div class="lpm-eyebrow">Last step</div>
+<h2 class="lpm-h">Want your code <span>by text?</span></h2>
+<p class="lpm-sub">Add your number and we&rsquo;ll text your 10% code so it&rsquo;s ready at checkout.</p>
+<form class="lpm-formrow" id="lpmPhoneEl">
+<input type="tel" id="lpmPhoneInput" class="lpm-input" placeholder="Your mobile number" autocomplete="tel">
+<button type="submit" class="btn lpm-btn">Text Me My Code &rarr;</button>
+</form>
+<div class="lpm-fine">By providing your number you agree to receive recurring automated marketing texts (e.g. your discount) from LivingFuel at the number provided. Consent is not a condition of purchase. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.</div>
+<button class="lpm-nothanks" id="lpmSkipPhone" type="button">Skip &mdash; email&rsquo;s fine</button>
 </div>
+
 <div id="lpmReveal" style="display:none">
 <div class="lpm-burst">&#127881;</div>
-<div class="lpm-eyebrow">Your mystery offer is</div>
+<div class="lpm-eyebrow">Here&rsquo;s your reward</div>
 <h2 class="lpm-h"><span>10% OFF</span> your first order</h2>
-<p class="lpm-sub">We just emailed your code &mdash; or use it right now:</p>
+<p class="lpm-sub">Use your code now &mdash; check your inbox for it too:</p>
 <div class="lpm-code">LFLP-MYSTERY10</div>
 <a class="btn lpm-btn" id="lpmApply" href="/discount/LFLP-MYSTERY10?redirect=%2Fpages%2Flivingprotein-lp">Apply &amp; Shop &rarr;</a>
 <div class="lpm-fine">10% off your first order &middot; one use per customer.</div>
 </div>
+
 </div>
 </div>
 `;
@@ -322,23 +362,24 @@ var def=document.querySelector('.bb-opt.active');if(def){setPlan(def);}
 (function(){
 var modal=document.getElementById('lpModal'); if(!modal) return;
 if(modal.parentElement!==document.body){ document.body.appendChild(modal); }
-var GOAL='', shown=false;
+var ans={}, shown=false;
+var STEPS=['lpmIntro','lpmQ1','lpmQ2','lpmQ3','lpmResult','lpmPhone','lpmReveal'];
+function show(id){ for(var s=0;s<STEPS.length;s++){ var el=document.getElementById(STEPS[s]); if(el) el.style.display=(STEPS[s]===id?'block':'none'); } var c=modal.querySelector('.lpm-card'); if(c) c.scrollTop=0; }
 function openM(){ if(shown||sessionStorage.getItem('lpmSeen')) return; shown=true; try{sessionStorage.setItem('lpmSeen','1');}catch(e){} modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); }
 function closeM(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }
-function show(id){ ['lpmQuiz','lpmForm','lpmReveal'].forEach(function(s){var el=document.getElementById(s); if(el) el.style.display=(s===id?'block':'none');}); }
 document.getElementById('lpmClose').addEventListener('click',closeM);
 modal.addEventListener('click',function(e){ if(e.target===modal) closeM(); });
 document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeM(); });
 var dec=modal.querySelectorAll('.lpm-decline'); for(var i=0;i<dec.length;i++){ dec[i].addEventListener('click',closeM); }
-var opts=modal.querySelectorAll('.lpm-opt'); for(var j=0;j<opts.length;j++){ opts[j].addEventListener('click',function(){ GOAL=(this.textContent||'').trim(); show('lpmForm'); var inp=document.getElementById('lpmEmail'); if(inp){ setTimeout(function(){try{inp.focus();}catch(e){}},60); } }); }
-document.getElementById('lpmFormEl').addEventListener('submit',function(e){
-  e.preventDefault();
-  var email=(document.getElementById('lpmEmail').value||'').trim();
-  if(!email||email.indexOf('@')<1) return;
-  try{ window._learnq=window._learnq||[]; var p={'$email':email,'$source':'LivingProtein LP popup'}; if(GOAL){ p['LP Goal']=GOAL; } window._learnq.push(['identify',p]); window._learnq.push(['track','LP Mystery Offer Unlocked',{email:email,code:'LFLP-MYSTERY10',offer:'10% off first order',goal:GOAL}]); }catch(err){}
-  show('lpmReveal');
-});
-// Trigger per Wellcopy: 6s time delay (both); desktop also gets exit-intent. Once per session.
+var start=document.getElementById('lpmStart'); if(start) start.addEventListener('click',function(){ show('lpmQ1'); });
+var RES={ gut:"Bloating and stomach discomfort usually trace back to dairy-based protein &mdash; LivingProtein is 100% dairy-free, with 6g fiber plus pre &amp; probiotics to support your gut, not wreck it.", smooth:"No more chalk &mdash; LivingProtein mixes smooth with just water, with no grit and no artificial sweeteners.", generic:"LivingProtein delivers all 9 essential amino acids from 100% plants, plus the 6g fiber and probiotics most proteins skip." };
+function bindQ(qid,key,next){ var b=document.querySelectorAll('#'+qid+' .lpm-opt'); for(var k=0;k<b.length;k++){ b[k].addEventListener('click',function(){ ans[key]=(this.getAttribute('data-val')||this.textContent).trim(); if(qid==='lpmQ3'){ var r=document.getElementById('lpmResultLine'); if(r) r.innerHTML=RES[this.getAttribute('data-result')]||RES.generic; } show(next); }); } }
+bindQ('lpmQ1','LP Protein Intake','lpmQ2');
+bindQ('lpmQ2','LP Tried Before','lpmQ3');
+bindQ('lpmQ3','LP Side Effect','lpmResult');
+document.getElementById('lpmFormEl').addEventListener('submit',function(e){ e.preventDefault(); var email=(document.getElementById('lpmEmail').value||'').trim(); if(!email||email.indexOf('@')<1) return; ans._email=email; try{ window._learnq=window._learnq||[]; var p={'$email':email,'$source':'LivingProtein LP quiz'}; ['LP Protein Intake','LP Tried Before','LP Side Effect'].forEach(function(kk){ if(ans[kk]) p[kk]=ans[kk]; }); window._learnq.push(['identify',p]); window._learnq.push(['track','LP Quiz Completed',{email:email,code:'LFLP-MYSTERY10','LP Protein Intake':ans['LP Protein Intake']||'','LP Tried Before':ans['LP Tried Before']||'','LP Side Effect':ans['LP Side Effect']||''}]); }catch(err){} show('lpmPhone'); });
+document.getElementById('lpmPhoneEl').addEventListener('submit',function(e){ e.preventDefault(); var raw=(document.getElementById('lpmPhoneInput').value||''); var digits=raw.replace(/[^0-9]/g,''); if(digits.length<7) return; var ph=raw.trim().charAt(0)==='+'?('+'+digits):digits; try{ window._learnq=window._learnq||[]; var pp={'$phone_number':ph,'LP SMS Consent':'Yes'}; if(ans._email) pp['$email']=ans._email; window._learnq.push(['identify',pp]); window._learnq.push(['track','LP SMS Opt-in',{phone:ph,code:'LFLP-MYSTERY10'}]); }catch(err){} show('lpmReveal'); });
+var skip=document.getElementById('lpmSkipPhone'); if(skip) skip.addEventListener('click',function(){ show('lpmReveal'); });
 setTimeout(openM,6000);
 if(!window.matchMedia('(max-width:900px)').matches){ document.addEventListener('mouseout',function(e){ if(!e.relatedTarget && e.clientY<=0) openM(); }); }
 })();
