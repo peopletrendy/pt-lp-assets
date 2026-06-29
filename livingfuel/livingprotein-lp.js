@@ -182,24 +182,24 @@ footer .cp{text-align:center;margin-top:18px;color:#8a7965}
 .sticky .btn{padding:14px 22px;font-size:15px}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:22px}.hero h1{font-size:34px}.sec{padding:46px 0}.sec h2{font-size:27px}.twocol,.pillgrid,.b3,.rev3,.amino-grid,.nogrid,.founder-grid,.revsum{grid-template-columns:1fr}.revsum .agg{border-right:none;border-bottom:1px solid var(--line);padding:0 0 18px}.vs{display:none}.pillgrid{grid-template-columns:1fr 1fr}.g-grid{grid-template-columns:1fr;text-align:center;justify-items:center}.final h2{font-size:28px}.sticky{display:flex}body{padding-bottom:74px}.statband .s+.s{border-left:none}.ctable{font-size:13px}.ctable th,.ctable td{padding:11px 8px}}
 @media(max-width:520px){.pillgrid,.nogrid{grid-template-columns:1fr}.hero h1{font-size:30px}}
-#lp-app .lpm-overlay{position:fixed;inset:0;z-index:2147483600;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(36,26,18,.74);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
-#lp-app .lpm-overlay.open{display:flex}
-#lp-app .lpm-card{position:relative;width:100%;max-width:458px;background:linear-gradient(180deg,#fff,var(--cream));border-radius:22px;box-shadow:0 30px 90px -20px rgba(0,0,0,.55);padding:40px 34px 30px;text-align:center;animation:lpmIn .35s ease}
+#lpModal{position:fixed;inset:0;z-index:2147483600;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(36,26,18,.74);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+#lpModal.open{display:flex}
+#lpModal .lpm-card{position:relative;width:100%;max-width:458px;background:linear-gradient(180deg,#fff,#FBF6EE);border-radius:22px;box-shadow:0 30px 90px -20px rgba(0,0,0,.55);padding:40px 34px 30px;text-align:center;animation:lpmIn .35s ease;color:#241a12}
 @keyframes lpmIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
-#lp-app .lpm-x{position:absolute;top:11px;right:15px;background:none;border:none;font-size:30px;line-height:1;color:var(--mute);cursor:pointer;padding:4px}
-#lp-app .lpm-logo{height:32px!important;width:auto!important;margin:0 auto 16px!important;display:block}
-#lp-app .lpm-eyebrow{font-weight:800;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--orange-d)}
-#lp-app .lpm-h{font-size:31px;font-weight:900;margin:9px 0 11px;line-height:1.04}
-#lp-app .lpm-h span{color:var(--orange-d)}
-#lp-app .lpm-sub{font-size:15px;color:var(--ink-soft);margin-bottom:20px;line-height:1.5}
-#lp-app .lpm-formrow{display:flex;flex-direction:column;gap:10px}
-#lp-app .lpm-input{width:100%;padding:15px 16px;border:2px solid var(--line);border-radius:12px;font-size:16px;font-family:inherit;text-align:center;color:var(--ink)}
-#lp-app .lpm-input:focus{outline:none;border-color:var(--orange)}
-#lp-app .lpm-btn{width:100%;font-size:17px}
-#lp-app .lpm-fine{font-size:11px;color:var(--mute);margin-top:13px;line-height:1.55}
-#lp-app .lpm-burst{font-size:42px;margin-bottom:4px}
-#lp-app .lpm-code{font-weight:900;font-size:23px;letter-spacing:.07em;color:var(--green);background:#eaf5ee;border:2px dashed var(--green);border-radius:12px;padding:15px;margin-bottom:16px}
-@media(max-width:520px){#lp-app .lpm-card{padding:34px 22px 26px}#lp-app .lpm-h{font-size:26px}}
+#lpModal .lpm-x{position:absolute;top:11px;right:15px;background:none;border:none;font-size:30px;line-height:1;color:#9c8a73;cursor:pointer;padding:4px}
+#lpModal .lpm-logo{height:32px;width:auto;margin:0 auto 16px;display:block}
+#lpModal .lpm-eyebrow{font-weight:800;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#D85A1A}
+#lpModal .lpm-h{font-size:31px;font-weight:900;margin:9px 0 11px;line-height:1.04;letter-spacing:-.02em}
+#lpModal .lpm-h span{color:#D85A1A}
+#lpModal .lpm-sub{font-size:15px;color:#4a3d33;margin-bottom:20px;line-height:1.5}
+#lpModal .lpm-formrow{display:flex;flex-direction:column;gap:10px}
+#lpModal .lpm-input{width:100%;padding:15px 16px;border:2px solid #E7DAC6;border-radius:12px;font-size:16px;font-family:inherit;text-align:center;color:#241a12}
+#lpModal .lpm-input:focus{outline:none;border-color:#F47529}
+#lpModal .lpm-btn{width:100%;font-size:17px;color:#fff!important}
+#lpModal .lpm-fine{font-size:11px;color:#9c8a73;margin-top:13px;line-height:1.55}
+#lpModal .lpm-burst{font-size:42px;margin-bottom:4px}
+#lpModal .lpm-code{font-weight:900;font-size:23px;letter-spacing:.07em;color:#148040;background:#eaf5ee;border:2px dashed #148040;border-radius:12px;padding:15px;margin-bottom:16px}
+@media(max-width:520px){#lpModal .lpm-card{padding:34px 22px 26px}#lpModal .lpm-h{font-size:26px}}
 </style><div class='announce'>FREE SHIPPING ON SUBSCRIPTIONS &nbsp;&middot;&nbsp; <b>30-DAY</b> MONEY-BACK GUARANTEE &nbsp;&middot;&nbsp; FREE SHAKER + 2 GUIDES &nbsp;&middot;&nbsp; <b>500,000+</b> CANS SOLD</div>
 <div class='wrap'><div class='nav'><div class='brand'><img src='https://cdn.shopify.com/s/files/1/0705/3541/3938/files/LivingFuel-Logo-Lockup.png?v=1782527503' alt='LivingFuel - Scientifically Perfected Nutrition' style='height:46px;width:auto;display:block'></div><div class='rate'>&#9733;&#9733;&#9733;&#9733;&#9733; #1-Ranked Plant Protein</div></div></div>
 
@@ -270,7 +270,7 @@ footer .cp{text-align:center;margin-top:18px;color:#8a7965}
 <footer><div class='wrap'><div class='disc'><b>Statements about products and health conditions have not been evaluated by the U.S. Food and Drug Administration and are not intended to diagnose, treat, cure, or prevent any disease.</b> Individual results may vary. Consult your healthcare professional before starting any new supplement program. If you are pregnant, nursing, taking medication, or have a medical condition, consult your healthcare professional before using this product.</div><div class='fl'><a href='#'>Shop</a><a href='#'>Our Science</a><a href='#'>Subscriptions</a><a href='#'>Contact</a><a href='#'>Shipping &amp; Returns</a><a href='#'>Privacy</a></div><div class='cp'>&copy; LivingFuel &mdash; The Leader in Superfood Nutrition &middot; Scientifically Perfected Nutrition</div></div></footer>
 
 <div class='sticky'><div><div class='nm'>LivingProtein</div><div class='pr' id='stickyPr'><b>$59.99</b> &middot; Subscribe &amp; Save</div></div><a href='#offer' class='btn'>Choose Plan &rarr;</a></div>
-<div id="lpModal" class="lpm-overlay" aria-hidden="true">
+<div id="lpModal" aria-hidden="true">
 <div class="lpm-card" role="dialog" aria-modal="true" aria-label="Mystery offer">
 <button class="lpm-x" id="lpmClose" aria-label="Close">&times;</button>
 <div id="lpmForm">
@@ -307,6 +307,7 @@ var def=document.querySelector('.bb-opt.active');if(def){setPlan(def);}
 
 (function(){
 var modal=document.getElementById('lpModal'); if(!modal) return;
+if(modal.parentElement!==document.body){ document.body.appendChild(modal); }
 var shown=false;
 function openM(){ if(shown||sessionStorage.getItem('lpmSeen')) return; shown=true; try{sessionStorage.setItem('lpmSeen','1');}catch(e){} modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); }
 function closeM(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }
