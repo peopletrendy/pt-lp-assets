@@ -278,48 +278,13 @@ footer .cp{text-align:center;margin-top:18px;color:#8a7965}
 
 <div class='sticky'><div><div class='nm'>LivingProtein</div><div class='pr' id='stickyPr'><b>$59.99</b> &middot; Subscribe &amp; Save</div></div><a href='#offer' class='btn'>Choose Plan &rarr;</a></div>
 <div id="lpModal" aria-hidden="true">
-<div class="lpm-card" role="dialog" aria-modal="true" aria-label="LivingProtein quiz">
+<div class="lpm-card" role="dialog" aria-modal="true" aria-label="LivingProtein welcome offer">
 <button class="lpm-x" id="lpmClose" aria-label="Close">&times;</button>
 
 <div id="lpmIntro"><img class="lpm-logo" src="https://cdn.shopify.com/s/files/1/0705/3541/3938/files/LivingFuel-Logo-Lockup.png?v=1782527503" alt="LivingFuel">
-<div class="lpm-eyebrow">30-second quiz</div>
-<h2 class="lpm-h">Is LivingProtein <span>right for you?</span></h2>
-<p class="lpm-sub">Answer 3 quick questions and unlock <b>10% off</b> to try it for yourself.</p>
-<button class="btn lpm-btn" id="lpmStart" type="button">Start the Quiz &rarr;</button>
-<button class="lpm-nothanks lpm-decline" type="button">No thanks, I&rsquo;ll pay full price</button></div>
-
-<div id="lpmQ1" style="display:none">
-<div class="lpm-prog">Question 1 of 3</div>
-<h2 class="lpm-h">How much protein do you get most days?</h2>
-<button class="lpm-opt" data-val="Not enough">Honestly, not enough</button>
-<button class="lpm-opt" data-val="Could be better">Some &mdash; could be better</button>
-<button class="lpm-opt" data-val="Hits goal">I hit my protein goal</button>
-<button class="lpm-nothanks lpm-decline" type="button">No thanks, I&rsquo;ll pay full price</button></div>
-
-<div id="lpmQ2" style="display:none">
-<div class="lpm-prog">Question 2 of 3</div>
-<h2 class="lpm-h">What protein have you used before?</h2>
-<button class="lpm-opt" data-val="Whey/dairy">Whey / dairy-based</button>
-<button class="lpm-opt" data-val="Plant-based">Plant-based</button>
-<button class="lpm-opt" data-val="Both">Both</button>
-<button class="lpm-opt" data-val="None yet">None yet</button>
-<button class="lpm-nothanks lpm-decline" type="button">No thanks, I&rsquo;ll pay full price</button></div>
-
-<div id="lpmQ3" style="display:none">
-<div class="lpm-prog">Question 3 of 3</div>
-<h2 class="lpm-h">Do any of these sound familiar?</h2>
-<button class="lpm-opt" data-val="Bloating/gas" data-result="gut">Bloating or gas</button>
-<button class="lpm-opt" data-val="Cramping" data-result="gut">Cramping or stomach discomfort</button>
-<button class="lpm-opt" data-val="Chalky taste" data-result="smooth">Chalky &amp; hard to drink</button>
-<button class="lpm-opt" data-val="None" data-result="generic">None of these</button>
-<button class="lpm-nothanks lpm-decline" type="button">No thanks, I&rsquo;ll pay full price</button></div>
-
-<div id="lpmResult" style="display:none">
-<div class="lpm-match">&#9989;</div>
-<div class="lpm-eyebrow">Your result</div>
-<h2 class="lpm-h">You&rsquo;re a <span>match</span>.</h2>
-<p class="lpm-sub" id="lpmResultLine">You&rsquo;re a strong match for LivingProtein.</p>
-<p class="lpm-sub">Enter your email and we&rsquo;ll send your <b>10% off code</b> &mdash; try it and feel the difference for yourself.</p>
+<div class="lpm-eyebrow">Welcome offer</div>
+<h2 class="lpm-h">Unlock <span>10% off</span> your first order</h2>
+<p class="lpm-sub">Enter your email and we&rsquo;ll send your <b>10% off code</b> &mdash; try LivingProtein and feel the difference for yourself.</p>
 <form class="lpm-formrow" id="lpmFormEl">
 <input type="email" id="lpmEmail" class="lpm-input" placeholder="Your email address" required autocomplete="email">
 <button type="submit" class="btn lpm-btn">Get My 10% Off &rarr;</button>
@@ -365,7 +330,7 @@ var def=document.querySelector('.bb-opt.active');if(def){setPlan(def);}
 var modal=document.getElementById('lpModal'); if(!modal) return;
 if(modal.parentElement!==document.body){ document.body.appendChild(modal); }
 var ans={}, shown=false;
-var STEPS=['lpmIntro','lpmQ1','lpmQ2','lpmQ3','lpmResult','lpmPhone','lpmReveal'];
+var STEPS=['lpmIntro','lpmPhone','lpmReveal'];
 function show(id){ for(var s=0;s<STEPS.length;s++){ var el=document.getElementById(STEPS[s]); if(el) el.style.display=(STEPS[s]===id?'block':'none'); } var c=modal.querySelector('.lpm-card'); if(c) c.scrollTop=0; }
 function openM(){ if(shown||sessionStorage.getItem('lpmSeen')) return; shown=true; try{sessionStorage.setItem('lpmSeen','1');}catch(e){} modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); }
 function closeM(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }
@@ -373,13 +338,7 @@ document.getElementById('lpmClose').addEventListener('click',closeM);
 modal.addEventListener('click',function(e){ if(e.target===modal) closeM(); });
 document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeM(); });
 var dec=modal.querySelectorAll('.lpm-decline'); for(var i=0;i<dec.length;i++){ dec[i].addEventListener('click',closeM); }
-var start=document.getElementById('lpmStart'); if(start) start.addEventListener('click',function(){ show('lpmQ1'); });
-var RES={ gut:"Bloating and stomach discomfort usually trace back to dairy-based protein &mdash; LivingProtein is 100% dairy-free, with 6g fiber plus pre &amp; probiotics to support your gut, not wreck it.", smooth:"No more chalk &mdash; LivingProtein mixes smooth with just water, with no grit and no artificial sweeteners.", generic:"LivingProtein delivers all 9 essential amino acids from 100% plants, plus the 6g fiber and probiotics most proteins skip." };
-function bindQ(qid,key,next){ var b=document.querySelectorAll('#'+qid+' .lpm-opt'); for(var k=0;k<b.length;k++){ b[k].addEventListener('click',function(){ ans[key]=(this.getAttribute('data-val')||this.textContent).trim(); if(qid==='lpmQ3'){ var r=document.getElementById('lpmResultLine'); if(r) r.innerHTML=RES[this.getAttribute('data-result')]||RES.generic; } show(next); }); } }
-bindQ('lpmQ1','LP Protein Intake','lpmQ2');
-bindQ('lpmQ2','LP Tried Before','lpmQ3');
-bindQ('lpmQ3','LP Side Effect','lpmResult');
-document.getElementById('lpmFormEl').addEventListener('submit',function(e){ e.preventDefault(); var email=(document.getElementById('lpmEmail').value||'').trim(); if(!email||email.indexOf('@')<1) return; ans._email=email; try{ window._learnq=window._learnq||[]; var p={'$email':email,'$source':'LivingProtein LP quiz'}; ['LP Protein Intake','LP Tried Before','LP Side Effect'].forEach(function(kk){ if(ans[kk]) p[kk]=ans[kk]; }); window._learnq.push(['identify',p]); window._learnq.push(['track','LP Quiz Completed',{email:email,code:'LFLP-MYSTERY10','LP Protein Intake':ans['LP Protein Intake']||'','LP Tried Before':ans['LP Tried Before']||'','LP Side Effect':ans['LP Side Effect']||''}]); }catch(err){} show('lpmPhone'); });
+document.getElementById('lpmFormEl').addEventListener('submit',function(e){ e.preventDefault(); var email=(document.getElementById('lpmEmail').value||'').trim(); if(!email||email.indexOf('@')<1) return; ans._email=email; try{ window._learnq=window._learnq||[]; window._learnq.push(['identify',{'$email':email,'$source':'LivingProtein LP popup'}]); window._learnq.push(['track','LP Quiz Completed',{email:email,code:'LFLP-MYSTERY10'}]); }catch(err){} show('lpmPhone'); });
 document.getElementById('lpmPhoneEl').addEventListener('submit',function(e){ e.preventDefault(); var raw=(document.getElementById('lpmPhoneInput').value||''); var digits=raw.replace(/[^0-9]/g,''); if(digits.length<7) return; var ph=raw.trim().charAt(0)==='+'?('+'+digits):digits; try{ window._learnq=window._learnq||[]; var pp={'$phone_number':ph,'LP SMS Consent':'Yes'}; if(ans._email) pp['$email']=ans._email; window._learnq.push(['identify',pp]); window._learnq.push(['track','LP SMS Opt-in',{phone:ph,code:'LFLP-MYSTERY10'}]); }catch(err){} show('lpmReveal'); });
 var skip=document.getElementById('lpmSkipPhone'); if(skip) skip.addEventListener('click',function(){ show('lpmReveal'); });
 setTimeout(openM,6000);
