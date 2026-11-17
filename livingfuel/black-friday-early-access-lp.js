@@ -26,6 +26,7 @@
   @media(max-width:680px){#lp-app .nav{padding-top:14px;padding-bottom:14px}#lp-app .logo{width:141px;height:35px}#lp-app .nav-note{font-size:8px;letter-spacing:.07em;max-width:110px;text-align:right}#lp-app .hero{padding:37px 0 27px}#lp-app h1{font-size:39px}#lp-app .intro{font-size:13px;padding:0 5px}#lp-app .hero-save{font-size:13px}#lp-app .hero .btn{margin-top:19px}#lp-app .grid{grid-template-columns:1fr;gap:23px;max-width:420px;margin:auto}#lp-app .card-top{padding:22px 23px 0}#lp-app .card-body{padding:0 23px 25px}#lp-app h2{font-size:25px}#lp-app .product-image{height:235px}#lp-app .contents{min-height:0;font-size:13px}#lp-app .save{font-size:23px}#lp-app .price strong{font-size:35px}#lp-app .shaker-inner{grid-template-columns:95px 1fr;gap:16px;padding:30px 18px}#lp-app .shaker-inner img{width:95px;height:135px}#lp-app .shaker-inner h2{font-size:20px}#lp-app .shaker-inner p{font-size:11px}#lp-app .shaker-inner .eyebrow{font-size:8px;margin-bottom:8px}#lp-app .faq{padding:40px 20px}#lp-app footer{padding-bottom:104px}#lp-app .foot-top{align-items:start;flex-direction:column}#lp-app .sticky{display:flex;position:fixed;bottom:0;left:0;right:0;background:#FBF6EEf5;border-top:1px solid var(--line);padding:10px 18px;gap:15px;align-items:center;justify-content:space-between;z-index:20;backdrop-filter:blur(10px)}#lp-app .sticky span{font-size:10px;line-height:1.5}#lp-app .sticky strong{display:block;font-size:17px}#lp-app .sticky .btn{padding:12px 20px;font-size:12px;min-height:45px}}
   #lp-app .card[data-offer="berry"] .product-image{object-fit:cover}
   #lp-app .card .card-top{padding-top:48px}
+  #lp-app .retail del{display:block;margin:2px 0 0;font-size:25px;font-weight:700;line-height:1.4;color:#75695c;text-decoration-thickness:2px}
   #lp-app .corner-badge{position:absolute;top:0;right:0;z-index:1;background:var(--dark);color:#fff;border-radius:0 0 0 12px;padding:8px 15px;font-size:12px;line-height:1.4;font-weight:800;letter-spacing:.02em}
   #lp-app .hero-save{display:inline-block;background:#fce8d8;color:#913c12;border:1px solid #f4cfb2;border-radius:8px;padding:8px 14px;font-size:12px}
   #lp-app .hero .btn{display:flex;width:max-content;max-width:100%;margin:23px auto 0}
@@ -43,7 +44,7 @@
   root.querySelectorAll('.card').forEach(card => {
     const badge = document.createElement('span');
     badge.className = 'corner-badge';
-    badge.textContent = 'Save 30%';
+    badge.textContent = 'Save over 30%';
     card.prepend(badge);
   });
   const dialog = root.querySelector('dialog');
