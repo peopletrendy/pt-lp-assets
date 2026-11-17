@@ -28,6 +28,7 @@
   #lp-app .corner-badge{position:absolute;top:0;right:0;z-index:1;background:var(--dark);color:#fff;border-radius:0 0 0 12px;padding:8px 15px;font-size:12px;line-height:1.4;font-weight:800;letter-spacing:.02em}
   #lp-app .hero-save{display:inline-block;background:#fce8d8;color:#913c12;border:1px solid #f4cfb2;border-radius:8px;padding:8px 14px;font-size:12px}
   #lp-app .hero .btn{display:flex;width:max-content;max-width:100%;margin:23px auto 0}
+  #lp-app .purchase-limit{font-size:12px;font-weight:700;color:var(--dark);margin-top:12px}
   #lp-app .nutrition{background:#F5ECDD;border-block:1px solid var(--line);padding:53px 0}
   #lp-app .nutrition-head{text-align:center;max-width:700px;margin:0 auto 28px}
   #lp-app .nutrition-head h2{font-size:clamp(28px,3vw,39px);letter-spacing:-.035em}
@@ -59,7 +60,7 @@
   </style>
   <div class="preview" role="status">DESIGN PREVIEW · Checkout is disabled · Not live</div>
   <nav class="nav wrap" aria-label="Living Fuel"><a href="https://livingfuel.com" aria-label="Living Fuel home"><img class="logo" src="https://cdn.shopify.com/s/files/1/0705/3541/3938/files/LivingFuel-Logo-Lockup.png?v=1782527503" alt="LivingFuel"></a><span class="nav-note">VIP early access · Nov 23–24</span></nav>
-  <header class="hero wrap"><span class="eyebrow">Black Friday early access bundles</span><h1>48 hours only.<br><span>Save 30% on each bundle.</span></h1><p class="intro">Available November 23–24 only. Stock up on your Living Fuel favorites and lock in your early-access bundle price.</p><p class="hero-save">Ends <strong>November 24 at 11:59 p.m. Eastern.</strong></p><a class="btn" href="#bundles">Choose my early-access bundle ↓</a><p class="micro">One-time purchase. Bundle pricing. No code needed.</p></header>
+  <header class="hero wrap"><span class="eyebrow">Black Friday early access bundles</span><h1>48 hours only.<br><span>Save up to $118.</span></h1><p class="intro">Available November 23–24 only. Stock up on your Living Fuel favorites and lock in your early-access bundle price.</p><p class="hero-save">Ends <strong>November 24 at 11:59 p.m. Eastern.</strong></p><a class="btn" href="#bundles">Choose my early-access bundle ↓</a><p class="purchase-limit">Limit 2 bundles total per customer. Mix &amp; match.</p><p class="micro">One-time purchase. Bundle pricing. No code needed.</p></header>
   <section class="offers wrap" id="bundles" aria-label="Choose your early-access bundle"><div class="grid">${offers.map(o=>`<article class="card ${o.key==='ultimate'?'featured':''}" data-offer="${o.key}"><div class="card-top"><p class="card-label">${labels[o.key]}</p><h2>${o.title}</h2></div><img class="product-image" src="${image(o)}" alt="${o.ingredients.map(([name,qty])=>qty+' '+name).join(', ')}" width="600" height="400"><div class="card-body"><div class="save">SAVE ${money(o.savings)}</div><ul class="contents">${o.ingredients.map(([name,qty])=>`<li><span class="check" aria-hidden="true">✓</span><span><strong>${qty} ×</strong> ${name}</span></li>`).join('')}<li><span class="check" aria-hidden="true">✓</span><span><strong>1 ×</strong> 24 oz stainless-steel shaker</span></li></ul><div class="price-block"><p class="retail">Items purchased separately <del>${money(o.retail)}</del></p><p class="price"><strong>${money(o.price)}</strong><small>bundle price</small></p><fieldset><legend>Choose your shaker color</legend><div class="colors">${['white','black'].map((c,i)=>`<label class="color"><input type="radio" name="color-${o.key}" value="${c}" ${i===0?'checked':''}><span><i class="swatch ${c}" aria-hidden="true"></i>Matte ${c==='white'?'White':'Black'}</span></label>`).join('')}</div></fieldset><button class="btn checkout" type="button" data-key="${o.key}">Checkout — ${money(o.price)}</button><p class="error" role="alert" hidden></p></div></div></article>`).join('')}</div><p class="basis">Savings compare the bundle price with the current individual one-time retail prices of every included item, including the $24.99 shaker. SuperGreens $109.99 · SuperBerry Ultimate $149.99 · LivingProtein $69.99. Shipping and taxes calculated at checkout. No additional discount included.</p></section>
   <section class="nutrition" id="nutrition" aria-labelledby="nutrition-title"><div class="wrap">
     <div class="nutrition-head"><span class="eyebrow">Meet the nutrition inside</span><h2 id="nutrition-title">More nutrition. Less guesswork.</h2><p>Superfood meals for mealtime. Plant-based protein for the moments you want more. Find your everyday favorites in these early-access bundles.</p></div>
@@ -83,6 +84,9 @@
     badge.textContent = 'Save 30%';
     card.prepend(badge);
   });
+  const limitFaq = document.createElement('details');
+  limitFaq.innerHTML = '<summary>Can I mix and match bundles?</summary><p>Yes. Choose any combination of the three early-access bundles, up to 2 bundles total per customer during the November 23–24 offer. The limit applies across all three bundles and both shaker colors.</p>';
+  root.querySelector('.faq details').after(limitFaq);
   const dialog = root.querySelector('dialog');
   root.querySelector('.close-preview').addEventListener('click',()=>dialog.close());
   root.querySelectorAll('.checkout').forEach(button => button.addEventListener('click', async () => {
