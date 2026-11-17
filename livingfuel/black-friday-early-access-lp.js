@@ -3,8 +3,14 @@
   const offers = [{"key":"green","title":"Green Vitality","productId":"15492064182450","handle":"thanksgiving-vip-green-vitality-bundle","price":22047,"ingredients":[["SuperGreens",2,10999],["LivingProtein",1,6999]],"white":"67996457664690","black":"67996457697458","image":"https://cdn.shopify.com/s/files/1/0705/3541/3938/files/thanksgiving-vip-green-vitality-hero.png?v=1794938725","retail":31496,"savings":9449},{"key":"ultimate","title":"Ultimate Wellness","productId":"15492064215218","handle":"thanksgiving-vip-ultimate-wellness-bundle","price":24847,"ingredients":[["SuperGreens",1,10999],["SuperBerry Ultimate",1,14999],["LivingProtein",1,6999]],"white":"67996457762994","black":"67996457795762","image":"https://cdn.shopify.com/s/files/1/0705/3541/3938/files/thanksgiving-vip-ultimate-wellness-hero.png?v=1794938724","retail":35496,"savings":10649},{"key":"berry","title":"Berry Abundance","productId":"15492063822002","handle":"thanksgiving-vip-berry-abundance-bundle","price":27647,"ingredients":[["SuperBerry Ultimate",2,14999],["LivingProtein",1,6999]],"white":"67996457173170","black":"67996457205938","image":"https://cdn.shopify.com/s/files/1/0705/3541/3938/files/thanksgiving-vip-berry-abundance-hero.png?v=1794938725","retail":39496,"savings":11849}];
   const root = document.getElementById('lp-app');
   if (!root) return;
-  // Deliberately locked for review. Activation requires approval and commerce QA.
-  const PREVIEW = true;
+  // Kyle approved publication; checkout protection is enforced by Guard.
+  const PREVIEW = false;
+  const OFFER_END = Date.parse('2026-11-25T05:00:00Z');
+  const expired = () => Date.now() >= OFFER_END;
+  const closeOffer = () => {
+    root.innerHTML = '<section style="max-width:720px;margin:80px auto;padding:32px;text-align:center;font-family:Arial,sans-serif"><h1>Early access has ended</h1><p>These Black Friday early-access bundles are no longer available.</p><a href="/collections/all">Shop Living Fuel</a></section>';
+  };
+  if (expired()) { closeOffer(); return; }
   const money = cents => new Intl.NumberFormat('en-US', {style:'currency',currency:'USD'}).format(cents/100);
   const labels = {green:'For the greens routine',ultimate:'A little of everything',berry:'For the berry routine'};
   const imageBase = './assets/';
@@ -14,6 +20,10 @@
   <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
   body.lf-vip-page{margin:0;background:#FBF6EE}.lf-vip-page #shopify-section-header,.lf-vip-page #shopify-section-footer,.lf-vip-page .shopify-section-group-header-group,.lf-vip-page .shopify-section-group-footer-group{display:none!important}
+  body.lf-vip-page [role="dialog"][aria-label="POPUP Form"]{display:none!important}
+  body.lf-vip-page,html:has(body.lf-vip-page){overflow-y:auto!important}
+  #lp-app header.hero{display:block!important;min-height:0!important;height:auto!important;background:none!important;overflow:visible!important}
+  #lp-app header.hero::before,#lp-app header.hero::after{content:none!important;display:none!important}
   .lf-vip-page .main-page-title{display:none}.lf-vip-page .main-page-section,.lf-vip-page #MainContent>.page-width{max-width:none;padding:0}.lf-vip-page .kl-teaser-WdxQrm,.lf-vip-page .kl-teaser-UDAxEn{display:none!important}
   #lp-app{--green:#148040;--dark:#0E5539;--orange:#F47529;--cream:#FBF6EE;--ink:#241a12;--line:#E7DAC6;color:var(--ink);font:15px/1.6 Montserrat,Arial,sans-serif;text-align:left;letter-spacing:normal}
   #lp-app *{box-sizing:border-box}#lp-app h1,#lp-app h2,#lp-app h3,#lp-app p{margin:0;font-family:Montserrat,Arial,sans-serif!important;color:inherit;letter-spacing:normal}#lp-app button,#lp-app a,#lp-app input{font:inherit}#lp-app a{color:inherit}#lp-app button{cursor:pointer}#lp-app .wrap{max-width:1240px;margin:auto;padding:0 28px}
@@ -59,7 +69,7 @@
   @media(max-width:680px){#lp-app .nutrition{padding:37px 0}#lp-app .nutrition-grid{grid-template-columns:1fr;gap:16px;max-width:420px;margin:auto}#lp-app .nutrition-card{padding:23px}#lp-app .nutrition-stats strong{font-size:36px}#lp-app .nutrition-head p{font-size:12px}#lp-app .quality-strip{gap:8px}#lp-app .quality-strip .quality-label{width:100%;text-align:center}#lp-app .quality-strip .quality{font-size:10px;padding:7px 10px}#lp-app .prep-steps{grid-template-columns:1fr;gap:20px}#lp-app .prep-step p{max-width:270px}}
   @media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}} 
   </style>
-  <div class="preview" role="status">DESIGN PREVIEW · Checkout is disabled · Not live</div>
+  ${PREVIEW ? '<div class="preview" role="status">DESIGN PREVIEW · Checkout is disabled · Not live</div>' : ''}
   <nav class="nav wrap" aria-label="Living Fuel"><a href="https://livingfuel.com" aria-label="Living Fuel home"><img class="logo" src="https://cdn.shopify.com/s/files/1/0705/3541/3938/files/LivingFuel-Logo-Lockup.png?v=1782527503" alt="LivingFuel"></a><span class="nav-note">VIP early access · Nov 23–24</span></nav>
   <header class="hero wrap"><span class="eyebrow">Black Friday early access bundles</span><h1>48 hours only.<br><span>Save up to $118.</span></h1><p class="intro">Available November 23–24 only. Stock up on your Living Fuel favorites and lock in your early-access bundle price.</p><p class="hero-save">Ends <strong>November 24 at 11:59 p.m. Eastern.</strong></p><a class="btn" href="#bundles">Choose my early-access bundle ↓</a><p class="purchase-limit">Limit 2 bundles total per customer. Mix &amp; match.</p><p class="micro">One-time purchase. Bundle pricing. No code needed.</p></header>
   <section class="offers wrap" id="bundles" aria-label="Choose your early-access bundle"><div class="grid">${offers.map(o=>`<article class="card ${o.key==='ultimate'?'featured':''}" data-offer="${o.key}"><div class="card-top"><p class="card-label">${labels[o.key]}</p><h2>${o.title}</h2></div><img class="product-image" src="${image(o)}" alt="${o.ingredients.map(([name,qty])=>qty+' '+name).join(', ')}" width="600" height="400"><div class="card-body"><div class="save">SAVE ${money(o.savings)}</div><ul class="contents">${o.ingredients.map(([name,qty])=>`<li><span class="check" aria-hidden="true">✓</span><span><strong>${qty} ×</strong> ${name}</span></li>`).join('')}<li><span class="check" aria-hidden="true">✓</span><span><strong>1 ×</strong> 24 oz stainless-steel shaker</span></li></ul><div class="price-block"><p class="retail">Items purchased separately <del>${money(o.retail)}</del></p><p class="price"><strong>${money(o.price)}</strong><small>bundle price</small></p><fieldset><legend>Choose your shaker color</legend><div class="colors">${['white','black'].map((c,i)=>`<label class="color"><input type="radio" name="color-${o.key}" value="${c}" ${i===0?'checked':''}><span><i class="swatch ${c}" aria-hidden="true"></i>Matte ${c==='white'?'White':'Black'}</span></label>`).join('')}</div></fieldset><button class="btn checkout" type="button" data-key="${o.key}">Checkout — ${money(o.price)}</button><p class="error" role="alert" hidden></p></div></div></article>`).join('')}</div><p class="basis">Savings compare the bundle price with the current individual one-time retail prices of every included item, including the $24.99 shaker. SuperGreens $109.99 · SuperBerry Ultimate $149.99 · LivingProtein $69.99. Shipping and taxes calculated at checkout. No additional discount included.</p></section>
@@ -74,7 +84,7 @@
     <div class="quality-strip" aria-label="Nutrition formula attributes"><span class="quality-label">All three nutrition formulas:</span><span class="quality"><span aria-hidden="true">✓</span> Vegan-Friendly</span><span class="quality"><span aria-hidden="true">✓</span> Non-GMO</span><span class="quality"><span aria-hidden="true">✓</span> Dairy-Free</span></div>
     <div class="prepare"><h3>Good nutrition. A simple routine.</h3><div class="prep-steps"><div class="prep-step"><span class="step-no" aria-hidden="true">1</span><h4>Add water</h4><p>Start with water or your preferred beverage, using the amount on your product label.</p></div><div class="prep-step"><span class="step-no" aria-hidden="true">2</span><h4>Shake or blend</h4><p>Add one labeled serving of your chosen formula and mix until smooth.</p></div><div class="prep-step"><span class="step-no" aria-hidden="true">3</span><h4>Enjoy your way</h4><p>Choose a Super Meal for mealtime, or LivingProtein for extra protein in your routine.</p></div></div><div class="return-cta"><a href="#bundles" class="btn">Find my early-access bundle ↑</a></div></div>
   </div></section>
-  <section class="faq"><h2>A few quick answers</h2><details><summary>What’s included in my bundle?</summary><p>Every bundle includes three cans of Living Fuel nutrition and one 24 oz stainless-steel shaker. Green Vitality has two SuperGreens and one LivingProtein; Ultimate Wellness has one SuperGreens, one SuperBerry Ultimate and one LivingProtein; Berry Abundance has two SuperBerry Ultimate and one LivingProtein.</p></details><details><summary>Is this a subscription?</summary><p>No. These are one-time bundle purchases, with no recurring order or subscription commitment.</p></details><details><summary>Do I need a discount code?</summary><p>No code is needed for the listed bundle price. These early-access bundles cannot be combined with other discount codes or offers.</p></details><details><summary>When is early access?</summary><p>November 23–24, 2026, Eastern Time. This is a design preview; purchasing is not enabled yet.</p></details><details><summary>How are the savings calculated?</summary><p>We add the current individual retail prices of all the items—including the shaker—and subtract the bundle price. This is a comparison with buying the items separately, not a previous bundle price.</p></details></section>
+  <section class="faq"><h2>A few quick answers</h2><details><summary>What’s included in my bundle?</summary><p>Every bundle includes three cans of Living Fuel nutrition and one 24 oz stainless-steel shaker. Green Vitality has two SuperGreens and one LivingProtein; Ultimate Wellness has one SuperGreens, one SuperBerry Ultimate and one LivingProtein; Berry Abundance has two SuperBerry Ultimate and one LivingProtein.</p></details><details><summary>Is this a subscription?</summary><p>No. These are one-time bundle purchases, with no recurring order or subscription commitment.</p></details><details><summary>Do I need a discount code?</summary><p>No code is needed for the listed bundle price. No additional promotional or customer-tier discounts apply. Redeemed reward points and normal qualifying U.S. retail free shipping on orders over $200 are allowed.</p></details><details><summary>When is early access?</summary><p>November 23–24, 2026, Eastern Time. The offer ends at 11:59 p.m. Eastern on November 24.${PREVIEW ? ' This is a design preview; purchasing is not enabled yet.' : ''}</p></details><details><summary>How are the savings calculated?</summary><p>We add the current individual retail prices of all the items—including the shaker—and subtract the bundle price. This is a comparison with buying the items separately, not a previous bundle price.</p></details></section>
   <footer><div class="wrap"><div class="foot-top"><span class="foot-name">LivingFuel</span><div class="foot-links"><a href="https://livingfuel.com/policies/privacy-policy">Privacy</a><a href="https://livingfuel.com/policies/terms-of-service">Terms</a><a href="https://livingfuel.com/policies/shipping-policy">Shipping</a></div></div><p class="disclaimer">Individual results may vary. These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease. Consult your healthcare provider before starting any new supplement program.</p></div></footer>
   <div class="sticky"><span>Early access bundles<strong>From ${money(Math.min(...offers.map(o=>o.price)))}</strong></span><a href="#bundles" class="btn">Choose my bundle</a></div>
   <dialog aria-labelledby="preview-title"><h2 id="preview-title">Your bundle selection</h2><p id="selection"></p><p>This is a preview. Nothing has been added to your cart and no payment will be taken.</p><button class="btn close-preview" type="button">Keep exploring</button></dialog>`;
@@ -90,7 +100,13 @@
   root.querySelector('.faq details').after(limitFaq);
   const dialog = root.querySelector('dialog');
   root.querySelector('.close-preview').addEventListener('click',()=>dialog.close());
+  let adding = false;
+  const expiryTimer = setInterval(() => {
+    if (expired()) { clearInterval(expiryTimer); closeOffer(); }
+  }, 1000);
   root.querySelectorAll('.checkout').forEach(button => button.addEventListener('click', async () => {
+    if (expired()) { closeOffer(); return; }
+    if (adding) return;
     const offer = offers.find(o=>o.key===button.dataset.key);
     const card = button.closest('article');
     const color = card.querySelector('input:checked').value;
@@ -103,7 +119,11 @@
     // Production implementation staged only. Never reassemble a native bundle.
     const error = card.querySelector('.error');
     error.hidden = true;
-    button.disabled = true;
+    adding = true;
+    const buttons = [...root.querySelectorAll('.checkout')];
+    buttons.forEach(b => { b.disabled = true; });
+    const label = button.textContent;
+    button.textContent = 'Adding your bundle…';
     try {
       const base = window.Shopify?.routes?.root || '/';
       const check = await fetch(`${base}products/${offer.handle}.js`, {credentials:'same-origin'});
@@ -111,12 +131,16 @@
       const product = await check.json();
       const selected = product.variants.find(v=>String(v.id)===variant);
       if (!selected?.available || selected.price!==offer.price) throw new Error('This bundle’s availability or price has changed. Please refresh before continuing.');
+      if (expired()) { closeOffer(); return; }
       const response = await fetch(`${base}cart/add.js`, {method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json'},body:JSON.stringify({items:[{id:variant,quantity:1}]})});
       if (!response.ok) throw new Error('We could not add the bundle. Check your cart before trying again.');
       window.location.assign(`${base}checkout`);
     } catch(e) {
       error.textContent = e.message || 'Please check your cart before trying again.';
       error.hidden = false;
-    } finally { button.disabled = false; }
+      adding = false;
+      buttons.forEach(b => { b.disabled = false; });
+      button.textContent = label;
+    }
   }));
 })();
