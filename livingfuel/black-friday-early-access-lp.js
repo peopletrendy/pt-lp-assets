@@ -28,6 +28,7 @@
   #lp-app .corner-badge{position:absolute;top:0;right:0;z-index:1;background:var(--dark);color:#fff;border-radius:0 0 0 12px;padding:8px 15px;font-size:12px;line-height:1.4;font-weight:800;letter-spacing:.02em}
   #lp-app .hero-save{display:inline-block;background:#fce8d8;color:#913c12;border:1px solid #f4cfb2;border-radius:8px;padding:8px 14px;font-size:12px}
   #lp-app .hero .btn{display:flex;width:max-content;max-width:100%;margin:23px auto 0}
+  #lp-app .hero>.eyebrow{font-size:clamp(21px,2.6vw,32px);line-height:1.25;letter-spacing:.035em;font-weight:800;max-width:900px;margin-bottom:19px}
   #lp-app .purchase-limit{font-size:12px;font-weight:700;color:var(--dark);margin-top:12px}
   #lp-app .nutrition{background:#F5ECDD;border-block:1px solid var(--line);padding:53px 0}
   #lp-app .nutrition-head{text-align:center;max-width:700px;margin:0 auto 28px}
