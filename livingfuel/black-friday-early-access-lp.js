@@ -82,7 +82,7 @@
     card.querySelector('.product-image').alt += ', and one LivingFuel stainless-steel shaker';
     const badge = document.createElement('span');
     badge.className = 'corner-badge';
-    badge.textContent = 'Save 30%';
+    badge.textContent = 'Save ' + money(offers.find(offer => offer.key === card.dataset.offer).savings);
     card.prepend(badge);
   });
   const limitFaq = document.createElement('details');
